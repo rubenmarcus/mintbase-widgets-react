@@ -1,0 +1,36 @@
+{
+  "name": "mintbase-widgets-react",
+  "version": "0.0.32",
+  "description": "React specific wrapper for mintbase-widgets",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rubenmarcus/mintbase-widgets-react.git"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf dist",
+    "compile": "npm run tsc",
+    "tsc": "tsc -p .",
+    "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}' --quiet --fix --ignore-pattern 'src/react-component-lib/*' --no-eslintrc -c .eslintrc.json"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "mintbase-widgets": "0.0.8"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.23",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.14",
+    "@typescript-eslint/eslint-plugin": "^2.28.0",
+    "@typescript-eslint/parser": "^2.28.0",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "typescript": "^4.3.5"
+  }
+}
